@@ -45,7 +45,9 @@ class Book(models.Model):
     email = models.EmailField()
     name = models.CharField(max_length=30)
     userid = models.DecimalField(decimal_places=0, max_digits=2)
-    busid = models.DecimalField(decimal_places=0, max_digits=2)
+    busid = models.DecimalField(
+        decimal_places=0, max_digits=2, verbose_name="Flight Name"
+    )
     bus_name = models.CharField(max_length=30)
     source = models.CharField(max_length=30)
     dest = models.CharField(max_length=30)
